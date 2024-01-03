@@ -1,0 +1,45 @@
+# variables definitiion
+variable "aws_instance"{
+
+description =  "ec2 instance type "
+type  =  string
+default = "t2.micro
+
+}
+
+variable  "security_group" {
+
+type  =  number
+default =  "10.78.188.91"
+
+}
+
+
+
+resource {
+
+instance_type   =   var.aws_instance 
+
+}
+
+terraform plan  -var  =  " aws_intance  = t2.large  "
+
+
+
+
+variable    "aws_instance" {
+
+type = number
+instance_type = t2.micro
+
+}
+
+terraform plan -var  = "aws_instance = t2.micro"
+
+resoucrce {
+
+instance_type = var.aws_instance
+
+}
+
+
